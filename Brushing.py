@@ -29,7 +29,7 @@ fig = px.scatter(data_frame=Data,x=X, y=Y,size =Size,color=Color,log_x=True,log_
 
 #st.plotly_chart(fig, theme="streamlit", use_container_width=True)
 
-col1, col2 = st.columns([4, 1])
+col1, col2 = st.columns([4, 4])
 
 with col1:
       st.header('Brushing')
