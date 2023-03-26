@@ -2,19 +2,21 @@ import pandas as pd
 import plotly.express as px
 import streamlit as st
 
+Data = pd.read_csv('https://raw.githubusercontent.com/nakhwaazizah/visdat/main/factbook.csv',index_col=0)
+
 with st.sidebar:
       X = st.selectbox(
       'X',
-      ('  GDP per capita ', ' Life expectancy at birth', '  Population ',' Birth rate'))
+      (Data.columns.values))
       Y = st.selectbox(
       'Y',
-      ('  GDP per capita ', ' Life expectancy at birth', '  Population ',' Birth rate'))
+      (Data.columns.values))
       Size = st.selectbox(
       'Size',
-      ('  GDP per capita ', ' Life expectancy at birth', '  Population ',' Birth rate'))
+      (Data.columns.values))
       Color = st.selectbox(
       'Color',
-      ('  GDP per capita ', ' Life expectancy at birth', '  Population ',' Birth rate'))
+      (Data.columns.values))
       Circle_area = st.slider('Circle Area', 0, 100, 60)
 
       st.write('X:', X)
@@ -22,8 +24,6 @@ with st.sidebar:
       st.write('Size:', Size)
       st.write('Color:', Color)
       st.write("Circle Area:", Circle_area)
-
-Data = pd.read_csv('https://raw.githubusercontent.com/nakhwaazizah/visdat/main/factbook.csv',index_col=0)
 
 fig = px.scatter(data_frame=Data,x=X, y=Y,size =Size,color=Color,log_x=True,log_y=True,size_max=Circle_area)
 
