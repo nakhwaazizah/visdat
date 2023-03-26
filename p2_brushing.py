@@ -15,10 +15,11 @@ with st.sidebar:
       st.write('Color:', Color)
       st.write("Circle Area:", Circle_area)
 
-Data = pd.read_csv('https://raw.githubusercontent.com/nakhwaazizah/visdat/main/factbook.csv',index_col=0)
-
 col1, col2 = st.columns(2)
 col3, col4 = st.columns(2)
+
+url = 'https://raw.githubusercontent.com/Adlibaari/Visual/main/factbook.csv'
+Data = pd.read_csv(url, index_col=0)
 
 with col1:
       X1 = st.selectbox(
