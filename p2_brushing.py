@@ -24,7 +24,7 @@ col3, col4 = st.columns(2)
 with col1:
       X1 = st.selectbox(
       'X',
-      (Data.columns.values)
+      (Data.columns.values), key='Chart1')
       Y1 = st.selectbox(
       'Y',
       (Data.columns.values), key='Chart2')
