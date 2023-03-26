@@ -27,11 +27,14 @@ Data = pd.read_csv('https://raw.githubusercontent.com/nakhwaazizah/visdat/main/f
 
 fig = px.scatter(data_frame=Data,x=X, y=Y,size =Size,color=Color,log_x=True,log_y=True,size_max=Circle_area)
 
-st.plotly_chart(fig, theme="streamlit", use_container_width=True)
+#st.plotly_chart(fig, theme="streamlit", use_container_width=True)
 
 col1, col2 = st.columns([4, 1])
 
-col1.subheader('Brushing')
-col1.st.plotly_chart(fig, theme="streamlit", use_container_width=True)
-col2.st.plotly_chart(fig, theme="streamlit", use_container_width=True)
+with col1:
+      st.header('Brushing')
+      st.plotly_chart(fig, theme="streamlit", use_container_width=True)
+with col2:
+      col2.st.plotly_chart(fig, theme="streamlit", use_container_width=True)
+
 
