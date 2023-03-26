@@ -35,6 +35,6 @@ with col1:
       st.header('Brushing')
       st.plotly_chart(fig, theme="streamlit", use_container_width=True)
 with col2:
-      col2.st.plotly_chart(fig, theme="streamlit", use_container_width=True)
+      st.plotly_chart(fig, theme="streamlit", use_container_width=True)
 
 
