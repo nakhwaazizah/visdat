@@ -57,6 +57,6 @@ with col4:
       (Data.columns.values), key='Chart7')
       Y4 = st.selectbox(
       'Y',
-      (Data.columns.values), key='Chart8')
+      (Data.columns.values), key='Chart8') 
       fig = px.scatter(data_frame=Data,x=X4, y=Y4,size =Size,color=Color,log_x=True,log_y=True,size_max=Circle_area)
       st.plotly_chart(fig, theme="streamlit", use_container_width=True)
